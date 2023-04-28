@@ -1,12 +1,26 @@
-body {
-  font-family: Arial, sans-serif;
+#periodic-table {
+  border-collapse: collapse;
+}
+
+#periodic-table th,
+#periodic-table td {
+  border: 1px solid black;
+  padding: 5px;
   text-align: center;
+  font-size: 14px;
 }
 
-h1 {
-  color: #336699;
+#periodic-table th {
+  background-color: #cccccc;
 }
 
-p {
-  color: #666666;
+.element {
+  position: relative;
+  cursor: pointer;
 }
+
+.element:hover:after {
+  content: attr(data-symbol);
+  position: absolute;
+  top: -20px;
+  left: 0;
